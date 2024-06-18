@@ -14,13 +14,20 @@ public class PagamentService {
 
     private final PedidoProducer pedidoProducer;
 
-    public PagamentService(PedidoProducer pedidoProducer) {
+    private final TokenService tokenService;
+
+    public PagamentService(PedidoProducer pedidoProducer, TokenService tokenService) {
         this.pedidoProducer = pedidoProducer;
+        this.tokenService = tokenService;
     }
 
     public PagamentoDtoResponse pagar(CarrinhoDtoRequest carrinho) throws BusinessException  {
         this.pedidoProducer.criarPedido(carrinho);
         return this.gerarTicket(carrinho.valorTotal(), carrinho.quantidadeItens());
+    }
+
+    private String authenticate() {
+        return this.tokenService.generateToken();
     }
 
     private PagamentoDtoResponse gerarTicket(double valorTotal, int quantidade){
