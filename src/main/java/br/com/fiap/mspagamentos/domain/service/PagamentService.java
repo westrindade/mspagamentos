@@ -14,11 +14,8 @@ public class PagamentService {
 
     private final PedidoProducer pedidoProducer;
 
-    private final TokenService tokenService;
-
-    public PagamentService(PedidoProducer pedidoProducer, TokenService tokenService) {
+    public PagamentService(PedidoProducer pedidoProducer) {
         this.pedidoProducer = pedidoProducer;
-        this.tokenService = tokenService;
     }
 
     public PagamentoDtoResponse pagar(CarrinhoDtoRequest carrinho) throws BusinessException  {
