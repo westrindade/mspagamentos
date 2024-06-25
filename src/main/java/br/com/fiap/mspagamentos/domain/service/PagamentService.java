@@ -26,10 +26,6 @@ public class PagamentService {
         return this.gerarTicket(carrinho.valorTotal(), carrinho.quantidadeItens());
     }
 
-    private String authenticate() {
-        return this.tokenService.generateToken();
-    }
-
     private PagamentoDtoResponse gerarTicket(double valorTotal, int quantidade){
         return new PagamentoDtoResponse(
                 UUID.randomUUID(),
