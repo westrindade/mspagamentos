@@ -9,10 +9,16 @@ Tech-challenge Fase 5 com temática de criar microserviço.
 ![Spring](https://skillicons.dev/icons?i=spring)Spring Boot 3.2.6
 
 ![Spring](https://skillicons.dev/icons?i=spring)
+Spring Data JPA
+
+![Spring](https://skillicons.dev/icons?i=spring)
 Spring Cloud
 
 ![Spring](https://skillicons.dev/icons?i=spring)
 Spring Doc/Swagger
+
+![H2](https://skillicons.dev/icons?i=scala)
+H2
 
 ![Java](https://skillicons.dev/icons?i=java)
 Lombok
